@@ -14,8 +14,10 @@ qtConfig(libudev) {
     HEADERS += qdevicediscovery_udev_p.h
     QMAKE_USE_PRIVATE += libudev
 } else: qtConfig(evdev) {
-    SOURCES += qdevicediscovery_static.cpp
-    HEADERS += qdevicediscovery_static_p.h
+    SOURCES += qdevicediscovery_hotplug.cpp
+    HEADERS += qdevicediscovery_hotplug_p.h
+    #SOURCES += qdevicediscovery_static.cpp
+    #HEADERS += qdevicediscovery_static_p.h
 } else {
     SOURCES += qdevicediscovery_dummy.cpp
     HEADERS += qdevicediscovery_dummy_p.h
